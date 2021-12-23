@@ -1,6 +1,5 @@
-# Pomodoro_timer_Project
+# Pomodoro Timer Project
 
-## App deployed via Vercel
 
 ## Context
 
