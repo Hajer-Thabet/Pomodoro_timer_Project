@@ -26,5 +26,6 @@ The technique uses a timer to break down work into intervals, traditionally 25 m
   
   
   ◦Stop button
+	
     •Disabled at the start
     •On click, will refresh timer, but will keep your focus duration and break duration settings.
