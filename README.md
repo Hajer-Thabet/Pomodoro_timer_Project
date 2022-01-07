@@ -9,27 +9,27 @@ The technique uses a timer to break down work into intervals, traditionally 25 m
 
   ◦ Focus Duration
   
-     • Default is set to 25 minutes. Goes up or down by intervals of 5
-     • Minus button decreases by 5 (can't go lower than 5 min)
-     • Plus button increases by 5 (can't go above 60 min)
+     • Default is set to 25 minutes. Goes up or down by intervals of 5.
+     • Minus button decreases by 5 (can't go lower than 5 min).
+     • Plus button increases by 5 (can't go above 60 min).
     
    <img src="public/image/focus.png">  
      
   ◦ Break Duration
   
-    • Default is set to 5 minutes. Goes up or down by intervals of 1
-    • Minus button decreases by 5 (can't go lower than 1 min)
-    • Plus button increases by 1 (can't go above 15 min)
+    • Default is set to 5 minutes. Goes up or down by intervals of 1.
+    • Minus button decreases by 5 (can't go lower than 1 min).
+    • Plus button increases by 1 (can't go above 15 min).
     
    <img src="public/image/break.png"> 
   
   
   ◦Play Button
   
-    • Clicking button starts counting down from focus duration
-    • Progress bar fills up
-    • Pausing stops the timer, displays a "Paused" text, stops the progress
-    • If timer reaches the end on focus, will sound an alarm, then automatically jump to break and vice versa
+    • Clicking button starts counting down from focus duration.
+    • Progress bar fills up.
+    • Pausing stops the timer, displays a "Paused" text, stops the progress.
+    • If timer reaches the end on focus, will sound an alarm, then automatically jump to break and vice versa.
     
    
    <img src="public/image/play.png">
@@ -38,7 +38,7 @@ The technique uses a timer to break down work into intervals, traditionally 25 m
   
   ◦Stop button
 	
-    • Disabled at the start
+    • Disabled at the start.
     • On click, will refresh timer, but will keep your focus duration and break duration settings.
    
    <img src="public/image/stop.png">
