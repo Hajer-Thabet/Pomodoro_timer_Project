@@ -7,18 +7,21 @@ The technique uses a timer to break down work into intervals, traditionally 25 m
 # Functionality
 
   ◦ Focus Duration
+  
      • Default is set to 25 minutes. Goes up or down by intervals of 5
      •  Minus button decreases by 5 (can't go lower than 5 min)
      • Plus button increases by 5 (can't go above 60 min)
      
      
   ◦ Break Duration
+  
     •Default is set to 5 minutes. Goes up or down by intervals of 1
     •Minus button decreases by 5 (can't go lower than 1 min)
     •Plus button increases by 1 (can't go above 15 min)
   
   
   ◦Play Button
+  
     •Clicking button starts counting down from focus duration
     •Progress bar fills up
     •Pausing stops the timer, displays a "Paused" text, stops the progress
