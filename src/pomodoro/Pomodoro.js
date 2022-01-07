@@ -50,6 +50,35 @@ function nextSession(focusDuration, breakDuration) {
   };
 }
 
+/*
+Are all props treated as read-only?
+No
+
+RB - Disagree - props are used to only update state.
+
+Is all state updated using callbacks to avoid race conditions?
+Allowable exceptions are cases where the next state is not determined by the current state
+(e.g., when disabling the timer it is okay to just call setIsTimerRunning(false)).
+No
+
+RB - Disagree - From my review useState update functions are being used as callbacks.
+
+Is the main “Pomodoro” free of any conditional display logic? (e.g., 
+  no ‘if statements’ in the render function). Each component determines its own visibility.
+No
+
+RB - Agree - move session conditional into Time component.
+
+Note two things that the student could improve on.
+Hi Hajer, The average and suggested Pomodoro session length is 25 minutes,
+ followed by a 5-minute break. For your Pomodoro timer,
+ the break duration exceeds the focus duration. Please check.
+
+RB - More info needed. Screen capture?
+
+ */
+
+
 function Pomodoro() {
   // Timer starts out paused
   const [isTimerRunning, setIsTimerRunning] = useState(false);
@@ -98,21 +127,6 @@ function Pomodoro() {
       return nextState;
     });
   }
-
-  const renderTime = () => {
-    if (session) {
-      return (
-        <Time
-          session={session}
-          isTimerRunning={isTimerRunning}
-          focusDuration={focusDuration}
-          breakDuration={breakDuration}
-        />
-      );
-    } else {
-      return null;
-    }
-  };
 
    // event handler
   const handleClick = () => {
@@ -174,7 +188,13 @@ function Pomodoro() {
         </div>
       </div>
 
-      {renderTime()}
+      <Time
+          session={session}
+          isTimerRunning={isTimerRunning}
+          focusDuration={focusDuration}
+          breakDuration={breakDuration}
+        />
+      
     </div>
   );
 }
