@@ -11,6 +11,7 @@ The technique uses a timer to break down work into intervals, traditionally 25 m
      • Default is set to 25 minutes. Goes up or down by intervals of 5
      • Minus button decreases by 5 (can't go lower than 5 min)
      • Plus button increases by 5 (can't go above 60 min)
+     ![](public/image/focus.png)
      
      
   ◦ Break Duration
