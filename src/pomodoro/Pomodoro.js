@@ -50,33 +50,6 @@ function nextSession(focusDuration, breakDuration) {
   };
 }
 
-/*
-Are all props treated as read-only?
-No
-
-RB - Disagree - props are used to only update state.
-
-Is all state updated using callbacks to avoid race conditions?
-Allowable exceptions are cases where the next state is not determined by the current state
-(e.g., when disabling the timer it is okay to just call setIsTimerRunning(false)).
-No
-
-RB - Disagree - From my review useState update functions are being used as callbacks.
-
-Is the main “Pomodoro” free of any conditional display logic? (e.g., 
-  no ‘if statements’ in the render function). Each component determines its own visibility.
-No
-
-RB - Agree - move session conditional into Time component.
-
-Note two things that the student could improve on.
-Hi Hajer, The average and suggested Pomodoro session length is 25 minutes,
- followed by a 5-minute break. For your Pomodoro timer,
- the break duration exceeds the focus duration. Please check.
-
-RB - More info needed. Screen capture?
-
- */
 
 
 function Pomodoro() {
@@ -85,15 +58,13 @@ function Pomodoro() {
   // The current session - null where there is no session running
   const [session, setSession] = useState(null);
 
-  // ToDo: Allow the user to adjust the focus and break duration.
+  // Allow the user to adjust the focus and break duration.
 
   const [focusDuration, setFocusDuration] = useState(25);
   const [breakDuration, setBreakDuration] = useState(5);
 
   /**
    * Custom hook that invokes the callback function every second
-   *
-   * NOTE: You won't need to make changes to the callback function
    */
   useInterval(() => {
       if (session.timeRemaining === 0) {
@@ -172,8 +143,6 @@ function Pomodoro() {
                 })}
               />
             </button>
-            {/* TODO: Implement stopping the current focus or break session. and disable the stop button when there is no active session */}
-            {/* TODO: Disable the stop button when there is no active session */}
             <button
               type="button"
               className="btn btn-secondary"
